@@ -1,0 +1,15 @@
+# OS Temporary Files
+.DS_Store
+
+# Editor Configuration
+.idea/
+
+# Language Temporary Files
+node_modules/
+
+# Project Output
+dist/
+
+# Developer Temporary Files
+*.log
+*.swp

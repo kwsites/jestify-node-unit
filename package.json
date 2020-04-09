@@ -1,0 +1,43 @@
+{
+  "name": "@kwsites/jestify-node-unit",
+  "description": "Jest compatible wrappers for tests written in node-unit",
+  "version": "1.0.0",
+  "author": "Steve King <steve@mydev.co>",
+  "contributors": [
+    {
+      "name": "Steve King",
+      "email": "steve@mydev.co"
+    }
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc --project tsconfig.publish.json",
+    "test": "jest",
+    "preversion": "yarn run clean && yarn run build && yarn test",
+    "postversion": "npm publish --access=public && git push && git push --tags && yarn clean"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "rimraf": "^3.0.1",
+    "typescript": "~3.7.2"
+  },
+  "keywords": [
+    "jest",
+    "node-unit"
+  ],
+  "repository": "git@github.com:kwsites/jestify-node-unit.git",
+  "main": "dist/jestify-node-unit.js",
+  "types": "dist/jestify-node-unit.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist/*.js",
+    "dist/*.map",
+    "dist/*.d.ts"
+  ]
+}
