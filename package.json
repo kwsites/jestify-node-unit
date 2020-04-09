@@ -1,7 +1,7 @@
 {
   "name": "@kwsites/jestify-node-unit",
   "description": "Jest compatible wrappers for tests written in node-unit",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Steve King <steve@mydev.co>",
   "contributors": [
     {
