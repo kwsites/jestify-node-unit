@@ -47,7 +47,7 @@ export function jestify(spec: NodeUnitSpec) {
     nonLifeCycleMethods<NodeUnitSuite>(spec).forEach(([name, suite]) => {
 
         describe(name, () => {
-            debugger;
+
             addLifecycleHandlers(suite.setUp, suite.tearDown);
 
             nonLifeCycleMethods<NodeUnitTest>(suite).forEach(([testName, executor]) => {
